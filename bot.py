@@ -1,3 +1,5 @@
+import os
+import traceback
 import logging
 import logging.config
 
@@ -5,6 +7,7 @@ import logging.config
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.ERROR)
 
+from pyromod import listen
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from utils import Media
