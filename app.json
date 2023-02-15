@@ -33,8 +33,28 @@
             "description": "Get this value from https://my.telegram.org",
             "value": ""
         },
+        "BOT_OWNER": {
+            "description": "Bot Owner UserID"
+        },
+        "BOT_USERNAME":{
+            "description": "Bot username without @"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "ID of a Channel which you want to do Force Sub to use the bot. Example: -100123456789",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "Logs Channel ID for some Tracking XD. Example: -100123456789"
+        },
+        "BROADCAST_AS_COPY": {
+            "description": "Broadcast as Copy or with Forward Tag. Value should be True/False."
+        },
+        "SESSION_NAME": {
+            "description": "Any Bot Session Name for Save Users in db.",
+            "required": false
+        },
         "CHANNELS": {
-            "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "description": "Username or ID of database channel or group. Separate multiple IDs by space.",
             "value": ""
         },
         "ADMINS": {
@@ -46,14 +66,13 @@
             "value": "",
             "required": false
         },
-        "AUTH_CHANNEL": {
-            "description": "Username or ID of channel. Without subscribing this channel users cannot use bot.",
-            "value": "",
-            "required": true
+        "BANNED_USERS": {
+            "description": "Banned users user id , these users are banned from the bot permenentally",
+            "required": false
         },
-        "INVITE_MSG": {
-            "description": "Auth channel invitation message",
-            "value": "'Please join @.... to use this bot'",
+        "START_MSG": {
+            "description": "A Massege for view at start. Id you want to change it you can change it here",
+            "value": "**Hi {}👋\n\nI'm Leo Media Search Bot**\n\nYou can start searching by the 'Search Media 🔎' button below 😊",
             "required": false
         },
         "USE_CAPTION_FILTER": {
@@ -62,9 +81,13 @@
             "required": false
         },
         "DATABASE_URI": {
-            "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
+            "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help ask in t.me/leosupportx",
             "value": "",
             "required": true
+        },
+        "MONGODB_URI": {
+            "description": "mongo based db for save users in db .. Dont use the inline search bots database URI",
+            "required": false
         },
         "DATABASE_NAME": {
             "description": "Name of the database in mongoDB.",
